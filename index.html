@@ -146,44 +146,27 @@
       letter-spacing: -0.02em; margin-bottom: 16px;
     }
     .section-sub { font-size: 16px; color: var(--text-mid); max-width: 520px; margin: 0 auto; line-height: 1.7; }
-    .phones-row { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: flex-end; }
+    .phones-row { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; align-items: flex-end; margin-bottom: 64px; }
 
     /* Features */
     .features-grid {
       display: grid;
-      gap: 24px;
+      gap: 48px 32px;
       grid-template-columns: repeat(2, 1fr);
-      max-width: 720px;
+      max-width: 1100px;
       margin: 0 auto;
     }
-    .feature-card {
-      background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 2px 16px rgba(44,62,80,0.07);
-      border-top: 3px solid var(--teal);
-      overflow: hidden;
-    }
-    .feature-phone-wrap {
+    .feature-item {
       display: flex;
-      justify-content: center;
-      padding: 24px 16px 0;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    .feature-screenshot {
-      width: 100%;
-      max-width: 200px;
-      aspect-ratio: 200 / 410;
-      margin: 0 auto;
-      display: block;
-      border-radius: 24px;
-      box-shadow: 0 8px 32px rgba(44,62,80,0.15);
-      object-fit: cover;
-      object-position: top center;
-    }
-    .feature-card-body {
-      padding: 20px 24px 24px;
+    .feature-item .phone {
+      margin-bottom: 20px;
     }
     .feature-title { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
-    .feature-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
+    .feature-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; max-width: 320px; }
 
     /* For section */
     .for-section { background: var(--warm-grey); padding: 96px 24px; }
@@ -309,61 +292,48 @@
       <h2>Everything in one place</h2>
       <p class="section-sub">Six features designed to work together so families and caregivers can focus on what matters most.</p>
     </div>
-  
+
+    <div class="phones-row">
+      <div>
+        <div class="phone"><div class="phone-screen"><img src="screenshots/activities.png" alt="Activities in Kiddoe" loading="lazy"></div></div>
+        <div class="phone-label">Activities</div>
+      </div>
+      <div>
+        <div class="phone"><div class="phone-screen"><img src="screenshots/meals.png" alt="Meals in Kiddoe" loading="lazy"></div></div>
+        <div class="phone-label">Meals</div>
+      </div>
+    </div>
+
     <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-phone-wrap">
-          <img src="screenshots/activities.png" alt="Activities in Kiddoe" class="feature-screenshot" loading="lazy">
-        </div>
-        <div class="feature-card-body">
-          <div class="feature-title">Activities</div>
-          <div class="feature-body">Three personalized activity suggestions every session, matched to your children's ages, moods and interests. Never generic. Always right for right now.</div>
-        </div>
+      <div class="feature-item">
+        <div class="phone"><div class="phone-screen"><img src="screenshots/activities.png" alt="Activities in Kiddoe" loading="lazy"></div></div>
+        <div class="feature-title">Activities</div>
+        <div class="feature-body">Three personalized suggestions every session, matched to your children's ages, moods and interests. Never generic. Always right for right now.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-phone-wrap">
-          <img src="screenshots/meals.png" alt="Meals in Kiddoe" class="feature-screenshot" loading="lazy">
-        </div>
-        <div class="feature-card-body">
-          <div class="feature-title">Meals</div>
-          <div class="feature-body">Nutritionally balanced meal plans for the whole week. Breakfast, lunch, dinner, and snacks — with dietary filtering built in.</div>
-        </div>
+      <div class="feature-item">
+        <div class="phone"><div class="phone-screen"><img src="screenshots/meals.png" alt="Meals in Kiddoe" loading="lazy"></div></div>
+        <div class="feature-title">Meals</div>
+        <div class="feature-body">Weekly meal planning with a recipe library filtered to your family's dietary needs. Shopping list generated automatically.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-phone-wrap">
-          <img src="screenshots/schedule.png" alt="Schedule in Kiddoe" class="feature-screenshot" loading="lazy">
-        </div>
-        <div class="feature-card-body">
-          <div class="feature-title">Schedule</div>
-          <div class="feature-body">A shared calendar your whole care team can see. Caregiver hours, events, and appointments in one place.</div>
-        </div>
+      <div class="feature-item">
+        <div class="phone"><div class="phone-screen"><img src="screenshots/schedule.png" alt="Schedule in Kiddoe" loading="lazy"></div></div>
+        <div class="feature-title">Schedule</div>
+        <div class="feature-body">A shared calendar for your whole family. Events, appointments and meal plan in one view. Everyone always knows what is happening.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-phone-wrap">
-          <img src="screenshots/baby-tracker.png" alt="Baby Tracker in Kiddoe" class="feature-screenshot" loading="lazy">
-        </div>
-        <div class="feature-card-body">
-          <div class="feature-title">Baby Tracker</div>
-          <div class="feature-body">Log feeds, diapers, sleep, and solids in seconds. Everyone on the care team sees the same picture.</div>
-        </div>
+      <div class="feature-item">
+        <div class="phone"><div class="phone-screen"><img src="screenshots/baby-tracker.png" alt="Baby Tracker in Kiddoe" loading="lazy"></div></div>
+        <div class="feature-title">Baby Tracker</div>
+        <div class="feature-body">Log feeds, sleep, diapers and solids in seconds. Everything in one place so nothing gets missed.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-phone-wrap">
-          <img src="screenshots/learning-journal.png" alt="Learning Journal in Kiddoe" class="feature-screenshot" loading="lazy">
-        </div>
-        <div class="feature-card-body">
-          <div class="feature-title">Learning Journal</div>
-          <div class="feature-body">Observation entries with developmental insights. Capture meaningful moments and track growth over time.</div>
-        </div>
+      <div class="feature-item">
+        <div class="phone"><div class="phone-screen"><img src="screenshots/explore.png" alt="Explore in Kiddoe" loading="lazy"></div></div>
+        <div class="feature-title">Explore</div>
+        <div class="feature-body">Hand-picked places to go and products recommended by our Norland-trained founder. Local classes, parks, museums and more.</div>
       </div>
-      <div class="feature-card">
-        <div class="feature-phone-wrap">
-          <img src="screenshots/household.png" alt="Household in Kiddoe" class="feature-screenshot" loading="lazy">
-        </div>
-        <div class="feature-card-body">
-          <div class="feature-title">Household</div>
-          <div class="feature-body">To-do lists, handover notes, medications, and family info. Everything your care team needs to stay on the same page.</div>
-        </div>
+      <div class="feature-item">
+        <div class="phone"><div class="phone-screen"><img src="screenshots/household.png" alt="Household in Kiddoe" loading="lazy"></div></div>
+        <div class="feature-title">Household</div>
+        <div class="feature-body">To-do lists, handover notes, medications and family info. Everything your family needs to stay organized.</div>
       </div>
     </div>
   </section>
