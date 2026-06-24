@@ -152,31 +152,49 @@
     .features-section { padding: 0 24px 96px; max-width: 1100px; margin: 0 auto; }
     .features-grid {
       display: grid;
-      gap: 28px;
+      gap: 24px;
       grid-template-columns: repeat(2, 1fr);
+      max-width: 720px;
+      margin: 0 auto;
     }
     .feature-card {
       background: #fff;
       border-radius: 20px;
-      overflow: hidden;
       box-shadow: 0 2px 16px rgba(44,62,80,0.07);
+      border-top: 3px solid var(--teal);
+      overflow: hidden;
     }
-    .feature-shot-wrap {
-      padding: 20px 20px 0;
-      background: linear-gradient(180deg, var(--teal-light) 0%, #fff 100%);
+    .feature-phone-wrap {
+      display: flex;
+      justify-content: center;
+      padding: 24px 16px 0;
     }
-    .feature-shot {
+    .feature-card .phone {
+      width: 200px;
+      height: 410px;
+      margin: 0 auto;
+      flex-shrink: 0;
+    }
+    .feature-screenshot {
       width: 100%;
-      aspect-ratio: 9 / 19.5;
-      object-fit: cover;
-      object-position: top center;
-      border-radius: 20px;
+      max-width: 200px;
+      margin: 0 auto;
       display: block;
-      box-shadow: 0 16px 48px rgba(44,62,80,0.2), 0 4px 14px rgba(44,62,80,0.1);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px rgba(44,62,80,0.15);
+    }
+    .feature-card .phone-screen .feature-screenshot {
+      width: 100%;
+      height: 100%;
+      max-width: none;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
+      object-fit: cover;
+      object-position: top;
     }
     .feature-card-body {
-      padding: 24px 24px 28px;
-      border-top: 3px solid var(--teal);
+      padding: 20px 24px 24px;
     }
     .feature-title { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
     .feature-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
@@ -329,8 +347,12 @@
   <section class="features-section">
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-shot-wrap">
-          <img src="screenshots/activities.png" alt="Activities in Kiddoe" class="feature-shot" loading="lazy">
+        <div class="feature-phone-wrap">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="screenshots/activities.png" alt="Activities in Kiddoe" class="feature-screenshot" loading="lazy">
+            </div>
+          </div>
         </div>
         <div class="feature-card-body">
           <div class="feature-title">Activities</div>
@@ -338,8 +360,12 @@
         </div>
       </div>
       <div class="feature-card">
-        <div class="feature-shot-wrap">
-          <img src="screenshots/meals.png" alt="Meals in Kiddoe" class="feature-shot" loading="lazy">
+        <div class="feature-phone-wrap">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="screenshots/meals.png" alt="Meals in Kiddoe" class="feature-screenshot" loading="lazy">
+            </div>
+          </div>
         </div>
         <div class="feature-card-body">
           <div class="feature-title">Meals</div>
@@ -347,8 +373,12 @@
         </div>
       </div>
       <div class="feature-card">
-        <div class="feature-shot-wrap">
-          <img src="screenshots/schedule.png" alt="Schedule in Kiddoe" class="feature-shot" loading="lazy">
+        <div class="feature-phone-wrap">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="screenshots/schedule.png" alt="Schedule in Kiddoe" class="feature-screenshot" loading="lazy">
+            </div>
+          </div>
         </div>
         <div class="feature-card-body">
           <div class="feature-title">Schedule</div>
@@ -356,8 +386,12 @@
         </div>
       </div>
       <div class="feature-card">
-        <div class="feature-shot-wrap">
-          <img src="screenshots/baby-tracker.png" alt="Baby Tracker in Kiddoe" class="feature-shot" loading="lazy">
+        <div class="feature-phone-wrap">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="screenshots/baby-tracker.png" alt="Baby Tracker in Kiddoe" class="feature-screenshot" loading="lazy">
+            </div>
+          </div>
         </div>
         <div class="feature-card-body">
           <div class="feature-title">Baby Tracker</div>
@@ -365,8 +399,12 @@
         </div>
       </div>
       <div class="feature-card">
-        <div class="feature-shot-wrap">
-          <img src="screenshots/learning-journal.png" alt="Learning Journal in Kiddoe" class="feature-shot" loading="lazy">
+        <div class="feature-phone-wrap">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="screenshots/learning-journal.png" alt="Learning Journal in Kiddoe" class="feature-screenshot" loading="lazy">
+            </div>
+          </div>
         </div>
         <div class="feature-card-body">
           <div class="feature-title">Learning Journal</div>
@@ -374,8 +412,12 @@
         </div>
       </div>
       <div class="feature-card">
-        <div class="feature-shot-wrap">
-          <img src="screenshots/household.png" alt="Household in Kiddoe" class="feature-shot" loading="lazy">
+        <div class="feature-phone-wrap">
+          <div class="phone">
+            <div class="phone-screen">
+              <img src="screenshots/household.png" alt="Household in Kiddoe" class="feature-screenshot" loading="lazy">
+            </div>
+          </div>
         </div>
         <div class="feature-card-body">
           <div class="feature-title">Household</div>
