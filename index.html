@@ -150,12 +150,34 @@
 
     /* Features */
     .features-section { padding: 0 24px 96px; max-width: 1100px; margin: 0 auto; }
-    .features-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .feature-card {
-      background: #fff; border-radius: 20px; padding: 28px 24px;
-      box-shadow: 0 2px 16px rgba(44,62,80,0.07); border-top: 3px solid var(--teal);
+    .features-grid {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: repeat(2, 1fr);
     }
-    .feature-icon { margin-bottom: 14px; color: var(--teal); }
+    .feature-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(44,62,80,0.07);
+    }
+    .feature-shot-wrap {
+      padding: 20px 20px 0;
+      background: linear-gradient(180deg, var(--teal-light) 0%, #fff 100%);
+    }
+    .feature-shot {
+      width: 100%;
+      aspect-ratio: 9 / 19.5;
+      object-fit: cover;
+      object-position: top center;
+      border-radius: 20px;
+      display: block;
+      box-shadow: 0 16px 48px rgba(44,62,80,0.2), 0 4px 14px rgba(44,62,80,0.1);
+    }
+    .feature-card-body {
+      padding: 24px 24px 28px;
+      border-top: 3px solid var(--teal);
+    }
     .feature-title { font-size: 17px; font-weight: 800; color: var(--navy); margin-bottom: 8px; }
     .feature-body { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
 
@@ -216,6 +238,7 @@
       nav { padding: 14px 20px; }
       .hero { padding: 100px 20px 60px; }
       .phones-row .phone:nth-child(3), .phones-row .phone:nth-child(4) { display: none; }
+      .features-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -306,28 +329,58 @@
   <section class="features-section">
     <div class="features-grid">
       <div class="feature-card">
-        <div class="feature-title">Personalized activity ideas</div>
-        <div class="feature-body">Three activity suggestions every session, matched to your children's ages, moods and interests. Never generic. Always right for right now.</div>
+        <div class="feature-shot-wrap">
+          <img src="screenshots/activities.png" alt="Activities in Kiddoe" class="feature-shot" loading="lazy">
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-title">Activities</div>
+          <div class="feature-body">Three personalized activity suggestions every session, matched to your children's ages, moods and interests. Never generic. Always right for right now.</div>
+        </div>
       </div>
       <div class="feature-card">
-        <div class="feature-title">Smart meal planning</div>
-        <div class="feature-body">Weekly meal planner with a recipe library filtered to your family's dietary needs. Shopping list generated automatically.</div>
+        <div class="feature-shot-wrap">
+          <img src="screenshots/meals.png" alt="Meals in Kiddoe" class="feature-shot" loading="lazy">
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-title">Meals</div>
+          <div class="feature-body">Nutritionally balanced meal plans for the whole week. Breakfast, lunch, dinner, and snacks — with dietary filtering built in.</div>
+        </div>
       </div>
       <div class="feature-card">
-        <div class="feature-title">Shared schedule</div>
-        <div class="feature-body">One calendar for the whole family and care team. Caregiver hours, events and meal plan in one shared view.</div>
+        <div class="feature-shot-wrap">
+          <img src="screenshots/schedule.png" alt="Schedule in Kiddoe" class="feature-shot" loading="lazy">
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-title">Schedule</div>
+          <div class="feature-body">A shared calendar your whole care team can see. Caregiver hours, events, and appointments in one place.</div>
+        </div>
       </div>
       <div class="feature-card">
-        <div class="feature-title">Baby tracker</div>
-        <div class="feature-body">Log nursing, sleep, diapers and feeds with a live timer. Shared with your caregiver in real time so everyone is always in the loop.</div>
+        <div class="feature-shot-wrap">
+          <img src="screenshots/baby-tracker.png" alt="Baby Tracker in Kiddoe" class="feature-shot" loading="lazy">
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-title">Baby Tracker</div>
+          <div class="feature-body">Log feeds, diapers, sleep, and solids in seconds. Everyone on the care team sees the same picture.</div>
+        </div>
       </div>
       <div class="feature-card">
-        <div class="feature-title">Learning journal</div>
-        <div class="feature-body">Beautiful developmental observations linked to each child's unique stage of growth. Grounded in the Norland methodology.</div>
+        <div class="feature-shot-wrap">
+          <img src="screenshots/learning-journal.png" alt="Learning Journal in Kiddoe" class="feature-shot" loading="lazy">
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-title">Learning Journal</div>
+          <div class="feature-body">Observation entries with developmental insights. Capture meaningful moments and track growth over time.</div>
+        </div>
       </div>
       <div class="feature-card">
-        <div class="feature-title">Household hub</div>
-        <div class="feature-body">Handover notes, medications, to-do lists and incident log. Everything the care team needs to stay organized and informed.</div>
+        <div class="feature-shot-wrap">
+          <img src="screenshots/household.png" alt="Household in Kiddoe" class="feature-shot" loading="lazy">
+        </div>
+        <div class="feature-card-body">
+          <div class="feature-title">Household</div>
+          <div class="feature-body">To-do lists, handover notes, medications, and family info. Everything your care team needs to stay on the same page.</div>
+        </div>
       </div>
     </div>
   </section>
